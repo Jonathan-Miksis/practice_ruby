@@ -66,6 +66,11 @@ class Item
     @color 
   end 
 
+  def brand =(input_brand)
+    @brand = input_brand
+  end
+  
+
 end
 
 item1 = Item.new("white", "Apple", 599.99)
