@@ -66,13 +66,24 @@ class Item
     @color 
   end 
 
-  def brand =(input_brand)
-    @brand = input_brand
+  def brand
+    @brand
   end
-  
 
+  def price
+    @price
+  end
+
+  # def brand =(input_brand)
+  #   @brand = input_brand
+  # end
 end
 
 item1 = Item.new("white", "Apple", 599.99)
 item1.information
+puts item1.brand
+puts item1.price
+puts item1.color
+
+# item1.brand = "HP"
 
