@@ -74,9 +74,9 @@ class Item
     @price
   end
 
-  # def brand =(input_brand)
-  #   @brand = input_brand
-  # end
+  def brand=(input_brand) 
+    @brand = input_brand
+  end
 end
 
 item1 = Item.new("white", "Apple", 599.99)
@@ -85,5 +85,5 @@ puts item1.brand
 puts item1.price
 puts item1.color
 
-# item1.brand = "HP"
+p item1.brand = "HP"
 
