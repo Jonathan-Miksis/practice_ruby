@@ -62,21 +62,24 @@ class Item
     p "This #{@brand} item comes in the color #{@color} and costs #{@price}."
   end
 
-  def color
-    @color 
-  end 
+  attr_reader :color, :brand, :price
+  attr_writer :brand
 
-  def brand
-    @brand
-  end
+  # def color
+  #   @color 
+  # end 
 
-  def price
-    @price
-  end
+  # def brand
+  #   @brand
+  # end
 
-  def brand=(input_brand) 
-    @brand = input_brand
-  end
+  # def price
+  #   @price
+  # end
+
+#   def brand=(input_brand) 
+#     @brand = input_brand
+#   end
 end
 
 item1 = Item.new("white", "Apple", 599.99)
