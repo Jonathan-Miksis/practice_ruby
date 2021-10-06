@@ -52,10 +52,10 @@
 
 
 class Item
-  def initialize(input_color, input_brand, input_price)
-    @color = input_color
-    @brand = input_brand
-    @price = input_price
+  def initialize(input_options)
+    @color = input_options[:color]
+    @brand = input_options[:brand]
+    @price = input_options[:price]
   end
 
   def information
@@ -82,7 +82,7 @@ class Item
 #   end
 end
 
-item1 = Item.new("white", "Apple", 599.99)
+item1 = Item.new({:color => "white", :brand => "HP", :price => 799.99})
 item1.information
 puts item1.brand
 puts item1.price
