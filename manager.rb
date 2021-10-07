@@ -43,6 +43,12 @@ class Manager < Employee
       index += 1
     end
   end
+
+  def fire_all_employees 
+    @employees.each do |employee|
+      employee.active = false
+    end
+  end
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
