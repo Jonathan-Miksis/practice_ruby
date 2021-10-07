@@ -52,6 +52,10 @@
 
 
 class Item
+
+  attr_reader :color, :brand, :price
+  attr_writer :brand
+
   def initialize(input_options)
     @color = input_options[:color]
     @brand = input_options[:brand]
@@ -61,28 +65,9 @@ class Item
   def information
     p "This #{@brand} item comes in the color #{@color} and costs #{@price}."
   end
-
-  attr_reader :color, :brand, :price
-  attr_writer :brand
-
-  # def color
-  #   @color 
-  # end 
-
-  # def brand
-  #   @brand
-  # end
-
-  # def price
-  #   @price
-  # end
-
-#   def brand=(input_brand) 
-#     @brand = input_brand
-#   end
 end
 
-item1 = Item.new({:color => "white", :brand => "HP", :price => 799.99})
+item1 = Item.new(color: "white", brand: "HP", price: 799.99)
 item1.information
 puts item1.brand
 puts item1.price
